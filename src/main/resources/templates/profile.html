@@ -1,19 +1,21 @@
 <html>
-
 <head>
-<title>base</title>
-
+<title>profile</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" media="all"  
-      href="../../css/test.css" th:href="@{../css/test.css}" />
+      href="../../css/test.css" th:href="@{/css/test.css}" />
       
       <link rel="stylesheet" type="text/css" media="all"  
       href="../../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
+      
+
 </head>
 
-	<body>
+<body>
+
+	<!-- Navigation -->
 	<div th:replace="fragments/header :: header">
-		<nav class="navbar navbar-inverse">
+    	<nav class="navbar navbar-inverse">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse">
@@ -24,16 +26,16 @@
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="login">login</a></li>
 						<li class="active"><a href="profile">profile</a></li>
-						
 					</ul>
 				</div>
 			</div>
 		</nav>
 		</div>
-		
-		<div id="page-content-wrapper">
-		<h1>This is divy</h1>
-		
-		</div>
-	</body>
+			<!-- Navigation End -->
+
+<div>
+<h1>This is the profile page</h1>
+</div>
+
+</body>
 </html>

@@ -5,35 +5,31 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" media="all"  
-      href="../../css/test.css" th:href="@{../css/test.css}" />
+      href="../../css/test.css" th:href="@{/css/test.css}" />
       
       <link rel="stylesheet" type="text/css" media="all"  
       href="../../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
 </head>
 
 	<body>
-	<div th:replace="fragments/header :: header">
+		<div class="container" th:fragment="header">
 		<nav class="navbar navbar-inverse">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse">
 					</button>
-					<a class="navbar-brand" href="home">Stacks</a>
+					<a class="navbar-brand" href="/">Stacks</a>
 				</div>
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="login">login</a></li>
-						<li class="active"><a href="profile">profile</a></li>
-						
+						<li class="active"><a href="/login">login</a></li>
+						<li class="active"><a href="/profile">profile</a></li>
+						<li class="active"><a href="/courses">classes</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 		</div>
-		
-		<div id="page-content-wrapper">
-		<h1>This is divy</h1>
-		
-		</div>
+	
 	</body>
 </html>

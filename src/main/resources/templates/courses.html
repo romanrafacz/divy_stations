@@ -1,18 +1,20 @@
 <html>
 
 <head>
-<title>base</title>
+<title>courses</title>
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" media="all"  
-      href="../../css/test.css" th:href="@{../css/test.css}" />
+      href="../../css/test.css" th:href="@{/css/test.css}" />
       
       <link rel="stylesheet" type="text/css" media="all"  
       href="../../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
 </head>
 
+
 	<body>
-	<div th:replace="fragments/header :: header">
+		
+		<div th:replace="fragments/header :: header">
 		<nav class="navbar navbar-inverse">
 			<div class="container">
 				<div class="navbar-header">
@@ -24,15 +26,15 @@
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="login">login</a></li>
 						<li class="active"><a href="profile">profile</a></li>
-						
 					</ul>
 				</div>
 			</div>
 		</nav>
 		</div>
 		
+		
 		<div id="page-content-wrapper">
-		<h1>This is divy</h1>
+		<h1>This is the courses pages</h1>
 		
 		</div>
 	</body>
