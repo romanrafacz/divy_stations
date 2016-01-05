@@ -12,4 +12,7 @@ public class UserCreateForm {
 	
 	@NotEmpty
 	private String passwordRepeated = "";
+	
+	@NotEmpty
+	private Role role = Role.USER;
 }
