@@ -4,11 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class CourseController {
+public class DivyController {
 	
-	@RequestMapping("/courses")
-	public String course(){
-		return "courses";
+	@RequestMapping("/divy")
+	public String divy(){
+		return "divy";
 	}
 
 }
