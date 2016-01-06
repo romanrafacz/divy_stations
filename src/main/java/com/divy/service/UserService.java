@@ -12,11 +12,7 @@ public interface UserService {
 	Optional<User> getUserById(Long id);
 	
 	//Changed to static, UserCreateFormValidate.validateEmail - needed this change
-	static Optional<User> getUserByEmail(String email) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
+	Optional<User> getUserByEmail(String email);
 	Collection<User> getAllUsers();
 	
 	User create(UserCreateForm form);
