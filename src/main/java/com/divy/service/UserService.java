@@ -10,8 +10,12 @@ import com.divy.domain.UserCreateForm;
 public interface UserService {
 	
 	Optional<User> getUserById(Long id);
-
-	Optional<User> getUserByEmail(String email);
+	
+	//Changed to static, UserCreateFormValidate.validateEmail - needed this change
+	static Optional<User> getUserByEmail(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	Collection<User> getAllUsers();
 	

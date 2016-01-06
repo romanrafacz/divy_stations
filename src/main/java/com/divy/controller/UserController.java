@@ -1,24 +1,27 @@
 package com.divy.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 
+import com.divy.domain.validator.UserCreateFormValidator;
 import com.divy.service.UserService;
 
-@Controller
 public class UserController {
-	
+
 	private final UserService userService;
+	private final UserCreateFormValidator userCreateFormValidator;
 	
 	@Autowired
-	public UserController(UserService userService){
+	public UserController(UserService userService, UserCreateFormValidator userCreateFormValidator){
 		this.userService = userService;
+		this.userCreateFormValidator = userCreateFormValidator;
 	}
-
-	@RequestMapping("/users")
-	public ModelAndView getUserPage(){
-		return new ModelAndView("users", "users", userService.getAllUsers() );
+	
+	@InitBinder("form")
+	public void initBinder(WebDataBinder binder){
+		binder.addValidators(userCreateFormValidator);
 	}
+	
+	
 }

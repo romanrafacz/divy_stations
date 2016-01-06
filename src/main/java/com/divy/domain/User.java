@@ -16,6 +16,7 @@ import org.hibernate.annotations.Table;
 
 
 @Entity
+@javax.persistence.Table(name="user")
 public class User implements Serializable{
 
 	@Id
